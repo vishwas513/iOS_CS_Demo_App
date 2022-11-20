@@ -1,0 +1,11 @@
+framework module CreditScoreSDK {
+  umbrella header "CreditScoreSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module CreditScoreSDK.Swift {
+  header "CreditScoreSDK-Swift.h"
+  requires objc
+}

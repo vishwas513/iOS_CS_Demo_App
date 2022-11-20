@@ -1,0 +1,47 @@
+{
+    "score": {
+        "value": 370,
+        "lastChecked": "2022-10-17T08:37:19Z"
+    },
+    "scoreOverview": {
+        "rangeStart": 300,
+        "rangeEnd": 900
+    },
+    "scoreRanges": [
+        {
+            "rangeStart": 825,
+            "rangeEnd": 900,
+            "rangeType": "excellent",
+            "percentageOfRange": 19
+        },
+        {
+            "rangeStart": 800,
+            "rangeEnd": 824,
+            "rangeType": "good",
+            "percentageOfRange": 20
+        },
+        {
+            "rangeStart": 775,
+            "rangeEnd": 799,
+            "rangeType": "average",
+            "percentageOfRange": 21
+        },
+        {
+            "rangeStart": 700,
+            "rangeEnd": 774,
+            "rangeType": "belowAverage",
+            "percentageOfRange": 21
+        },
+        
+        {
+            "rangeStart": 300,
+            "rangeEnd": 699,
+            "rangeType": "poor",
+            "percentageOfRange": 19
+        },
+        
+        
+        
+        
+    ]
+}

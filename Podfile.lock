@@ -1,0 +1,16 @@
+PODS:
+  - projectTestSDK8 (1.1.2)
+
+DEPENDENCIES:
+  - projectTestSDK8 (= 1.1.2)
+
+SPEC REPOS:
+  trunk:
+    - projectTestSDK8
+
+SPEC CHECKSUMS:
+  projectTestSDK8: fc5d4aff9092a52b02a251f058ece6805da9ace9
+
+PODFILE CHECKSUM: e5d1bfe3b4a4f96b0bbce8f0539c9f01b8154001
+
+COCOAPODS: 1.11.3

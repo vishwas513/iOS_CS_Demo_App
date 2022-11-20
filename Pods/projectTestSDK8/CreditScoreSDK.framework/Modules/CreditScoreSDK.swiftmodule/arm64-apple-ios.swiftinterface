@@ -1,0 +1,77 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios16.1 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name CreditScoreSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import ARKit
+@_exported import CreditScoreSDK
+import Foundation
+import SceneKit
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+open class InitlizerViewModel {
+  public init()
+  open func parseData(with data: Foundation.Data) -> CreditScoreSDK.ScoreData?
+  @objc deinit
+}
+open class ScoreViewModel {
+  public init(with data: CreditScoreSDK.ScoreData)
+  open func getPercentage() -> Swift.Int
+  open func getFormattedDateString() -> Swift.String
+  open func checkIfScoreInRange(score: Swift.Int, range: CreditScoreSDK.ScoreRange) -> Swift.Bool
+  open func getRangeWith(score: Swift.Int) -> CreditScoreSDK.RangeType?
+  @objc deinit
+}
+public struct ScoreData : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Score : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ScoreOverview : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ScoreRange : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum RangeType : Swift.String {
+  case poor, belowAverage, average, good, excellent
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class PointerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+open class ScoreViewInitilizer {
+  public init()
+  public static func initiateAppFlow(with controller: UIKit.UIViewController, jsonData: Foundation.Data)
+  public static func openJsonFile(fileName: Swift.String) -> Foundation.Data?
+  @objc deinit
+}
+public enum ARModel {
+  case overview, analysis
+  public static func == (a: CreditScoreSDK.ARModel, b: CreditScoreSDK.ARModel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+open class ARViewModel {
+  public init()
+  open var configuration: ARKit.ARWorldTrackingConfiguration {
+    get
+  }
+  @objc deinit
+}
+extension CreditScoreSDK.RangeType : Swift.Equatable {}
+extension CreditScoreSDK.RangeType : Swift.Hashable {}
+extension CreditScoreSDK.RangeType : Swift.RawRepresentable {}
+extension CreditScoreSDK.ARModel : Swift.Equatable {}
+extension CreditScoreSDK.ARModel : Swift.Hashable {}
